@@ -12,5 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
+
+Route::get('/main', function(){
+	return view('login');
+});
+
+Route::post('/main',function(){
+	return view('main');
+});
+
+Route::get('/forum',function(){
+	return view('forum');
+});
+
+Route::get('/add_topic',function(){
+	return view('add_topic');
+});
+
