@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/compiler',function(){
+		return view('compiler');
+	});
+Route::post('/compile', 'compilerController@compile');
