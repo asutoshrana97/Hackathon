@@ -8,15 +8,15 @@
 <title>@yield('title')</title>
 
 <!--STYLESHEETS-->
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
 
 <!--SCRIPTS-->
-<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
 
 <!--Slider-in icons-->
-<link type="text/css" rel="stylesheet" href="./materialize-css/css/materialize.min.css"  media="screen,projection"/>
-<link type="text/css" rel="stylesheet" href="./materialize-css/css/fusion_style.min.css"  media="screen,projection"/>
-<link rel="stylesheet" href="./materialize-css/font-awesome-4.5.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="/materialize-css/css/materialize.min.css"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="/materialize-css/css/fusion_style.min.css"  media="screen,projection"/>
+<link rel="stylesheet" href="/materialize-css/font-awesome-4.5.0/css/font-awesome.min.css">
 </head>
 <body>
 

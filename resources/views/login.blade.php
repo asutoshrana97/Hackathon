@@ -70,8 +70,14 @@ $(document).ready(function() {
     <!--LOGIN BUTTON--><input type="submit" name="submit" value="Login" class="button" /><!--END LOGIN BUTTON-->
     <!--REGISTER BUTTON--><input type="submit" name="submit" value="Register" class="register" /><!--END REGISTER BUTTON-->
     </div>
-    <!--END FOOTER-->
-
+    <?php
+        if(isset($error)){
+        ?> 
+        <center><div>
+            <p style="color: red;">Invalid Username or Password</p>
+        </div></center>
+        <!--END FOOTER-->
+    <?php } ?>
 </form>
 <!--END LOGIN FORM-->
 
