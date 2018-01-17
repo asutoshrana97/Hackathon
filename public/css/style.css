@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*******************
 LOGIN FORM STYLESHEET
 by: Amit Jakhu
@@ -295,4 +296,354 @@ FOOTER
 .login-form .footer .register:focus {
 	position: relative;
 	bottom: -1px;
+=======
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 1px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #484848;
+    opacity: 0.2;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+body,html{
+    height: 100%;
+}
+
+a{
+    color: #4594e8;
+}
+
+.error{
+    display: none;
+    text-align: center;
+    background-color: rgba(208, 43, 43, 0.88);
+    color: #fff;
+    line-height: 1.75;
+}
+
+.error-text{
+    text-align: center;
+    color: rgba(228, 43, 43, 0.88);
+}
+
+.btn{
+    width: 150px;
+    border-radius: 0px;
+    background-color: #4594e8;
+}
+
+.btn:hover{
+    background-color: rgba(7, 99, 146, 0.9);
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+.btn-flat{
+    text-align: center;
+    width: 150px;
+    border-radius: 0px;
+}
+
+.input-field input,.input-field textarea{
+    border: 1.5px solid lightgrey;
+    padding-left: 2px;
+    font-size: 18px;
+}
+
+.input-field label{
+    margin-left: 5px;
+}
+
+.input-field label.active{
+    margin-top: -5px;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #4594e8;
+  box-shadow: 0 0.5px 0 0 #4594e8;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #4594e8;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #4594e8;   
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+    background-color: #4594e8;   
+    border-color:  #4594e8;
+}
+
+[type="checkbox"].filled-in:checked+label:after {
+    border-color: #4594e8;
+    background-color: #4594e8;
+}
+
+input.file-path{
+    position: relative;
+    top : 10px;
+}
+
+.file-path-wrapper .file-path{
+    width: 500px !important;
+}
+
+
+section.home{
+    height: 100%;
+    background-image: url(/images/bg-2.jpg);
+    background-size: cover;
+}
+
+section .mask{
+    height: 100%;
+    background-color: rgba(25, 33, 36, 0.2);
+}
+
+.primary{
+    background-color: #4594e8;
+}
+
+nav{
+    background-color: #fff;
+}
+
+nav ul li a{
+    text-align: center;
+    padding: 0px;
+    font-family: "Roboto" , sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #2a2825;
+    font-size: 14px;
+    width: 100%;
+}
+
+nav ul li.col{
+    padding: 0px !important;
+}
+
+nav a.brand-logo{
+    color: rgba(42, 40, 37, 0.65);
+    padding: 0px 20px;
+    font-family: "Raleway" , sans-serif;
+}
+
+section.home h3{
+    margin-top: 150px;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    line-height: 1.2;
+}
+
+section.home h5{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    color: rgb(237, 237, 237);
+}
+
+section.home h4{
+    position: relative;
+    top: 2em;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+section.home h4:after{
+    display: none;
+}
+
+section.home h4 strong{
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+section.home .guide{
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+}
+
+.arrow{
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    transform: rotate(45deg);
+}
+
+.arrow img{
+    transform: rotate(-45deg);
+    height: 40px;
+    position: relative;
+    top: 9.5px;
+}
+
+section h4{
+    font-family: "Inconsolata" ,sans-serif;
+    text-align: center;
+    font-size: 3.5em;
+    line-height: 1.5;
+}
+
+section h4::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 20%;
+    margin-left: 40%;
+    background: #333;
+}
+
+.login.col{
+    position: relative;
+    top: 15%;
+    padding: 10px 0px 30px 0px;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: 500ms;
+}
+
+.login.col::hover{
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login h6{
+    text-align: center;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.login.col h5{
+    font-size: 2.5em;
+    color: rgba(0, 0, 0,0.5);
+}
+
+#signup.modal{
+    top: 2.5% !important;
+    max-height: 100%;
+}
+
+#signup.modal .modal-content{
+    padding: 0px 10px 40px 10px;
+}
+
+#signup.modal .modal-content h5{
+    font-size: 2em;
+    color: rgba(0,0,0,0.55)
+}
+
+#signup.modal .modal-content .input-field input{
+    font-size: 14px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+    section.home{
+        height: 100%;
+    }
+    
+    section.home h3{
+        margin-top: 20px;
+        font-size: 1.45em;
+        letter-spacing: 0.5px;
+        word-spacing: 0.5px;
+    }
+    
+    section.home h5{
+        margin-top: 10px;
+    }
+    
+    section.home h4{
+        display: none;
+    }
+    
+    section.home .login{
+        top: 7%;
+        padding: 0px 0px 5px 0px;
+    }
+    
+    section.home .login h5{
+        font-size: 2em;
+    }
+    
+    .input-field input{
+        font-size: 14px;
+        margin: 5px 0px;
+    }
+    
+    .input-field button{
+        margin-top: 5px;
+    }
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 }

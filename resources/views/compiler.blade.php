@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('master')
 
 @section('title','questionpaper')
@@ -6,6 +7,22 @@
 @section('body')
     <div class="row" style="background-color:whitesmoke">
         <div class="col s12">
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/jquery-2.1.4.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/compiler.css">
+    <link rel="stylesheet" type="text/css" href="css/compiler_style.css">
+</head>
+
+<body>
+    <div class="row" style="background-color:whitesmoke">
+        <div class="col s12"> 
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
                 <div class = "col s6">
                     <input name="lang" type="radio" id="lang1" value="gcc" checked>
                     <label for="lang1">C/C++ | </label>
@@ -20,7 +37,11 @@
                 <div class="col s3" style="float:right">
                     <input name="autocompletion" type="checkbox" id="autocomp" checked>
                     <label for="autocomp">Autocomplete |</label>
+<<<<<<< HEAD
                     <button onclick = "inc_font();" class="btn-floating btn-small waves-effect waves-light #17b755" style="font-size:xx-large">+</button> |
+=======
+                    <button onclick = "inc_font();" class="btn-floating btn-small waves-effect waves-light #17b755" style="font-size:xx-large">+</button> | 
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
                     <button onclick="dec_font();" class="btn-floating btn-small waves-effect waves-light #17b755" style="font-size:xx-large">-</button>
                 </div>
         </div>
@@ -50,7 +71,11 @@
                         enableLiveAutocompletion: true
                     });
             });
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
             $('#lang1').change(function() {
                 if ($(this).is(':checked'))
                     editor.session.setMode("ace/mode/c_cpp");
@@ -63,16 +88,28 @@
                 if ($(this).is(':checked'))
                     editor.session.setMode("ace/mode/python");
             });
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
             function inc_font(){
                 console.log(parseFloat(document.getElementById('editor').style.fontSize));
                 editor.setOptions({fontSize:editor.getFontSize()+2});
             }
+<<<<<<< HEAD
 
             function dec_font(){
                 editor.setOptions({fontSize:editor.getFontSize()-2});
             }
 
+=======
+            
+            function dec_font(){
+                editor.setOptions({fontSize:editor.getFontSize()-2});
+            }
+            
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
             function SubmitFormData() {
                 document.getElementById('loader').style.display = "block";
                 document.getElementById('codetext').value = editor.getValue();
@@ -94,7 +131,11 @@
                         document.getElementById('loader').style.display = "none";
                         document.getElementById("opt").value = data;
                     });
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
             }
         </script>
         <form id="myForm" method="post" action="compile.php" class="col s12">
@@ -117,4 +158,10 @@
             </div>
         </form>
     </div>
+<<<<<<< HEAD
 @stop
+=======
+</body>
+
+</html>
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691

@@ -41,7 +41,11 @@ class Database extends Migration
                 $table->integer('id')->unsigned();
                 $table->string('username');
                 $table->string('message');
+<<<<<<< HEAD
                 $table->timestamp('timestamp');
+=======
+                $table->timestamps('timestamp');
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
                 $table->timestamps();
                 $table->primary(['id','username','timestamp']);
 	        $table->foreign('id')->references('id')->on('discussion_thread');
@@ -92,6 +96,7 @@ class Database extends Migration
                 $table->foreign('username')->references('username')->on('login');
             });
         }
+<<<<<<< HEAD
         if (!Schema::hasTable('upload_public')){
             Schema::create('upload_public', function (Blueprint $table) {
                 $table->string('username');
@@ -108,6 +113,8 @@ class Database extends Migration
                 $table->foreign('username')->references('username')->on('login');
             });
         }
+=======
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
     }
 
     /**

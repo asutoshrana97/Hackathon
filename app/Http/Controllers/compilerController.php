@@ -5,6 +5,7 @@ use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Storage;
 use App\Judge;
 use App\upload_private;
 use App\upload_public;
+=======
+use App\Http\Requests;
+use Illuminate\Support\Facades\Storage;
+use App\Judge;
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 class compilerController extends Controller
 {
     public function compile()
@@ -28,6 +34,7 @@ class compilerController extends Controller
     		}
      		$CODE = new Judge;
      		$CODE->verdict = "Skipped";
+<<<<<<< HEAD
      		$CODE->save();
 
      		/**************COLLECTING FORM INPUTS*********************/
@@ -38,11 +45,27 @@ class compilerController extends Controller
 
 			/**************GENERATING FILE NAMES AS PER ID************/
 
+=======
+     		$CODE->save(); 
+    		
+     		/**************COLLECTING FORM INPUTS*********************/
+    		
+    		$code = $_POST['code'];
+			$input = $_POST['input'];
+			$lang = $_POST['langs'];
+			
+			/**************GENERATING FILE NAMES AS PER ID************/
+			
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 			$input_file  = $CODE->submission_id.'.ip.txt';
 			$output_file = $CODE->submission_id.'.op.txt';
 			$error_file  = $CODE->submission_id.'.er.txt';
 			Storage::put($dir2.$input_file,$input);
+<<<<<<< HEAD
 
+=======
+			
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 			/***********COMPILING AS PER LANGUAGE IN INPUT************/
 
 			if ($lang == "gcc")
@@ -67,16 +90,27 @@ class compilerController extends Controller
 			            {
 				            exec('cd '.$dir.' && timeout 1 ./'.$exec_file.' <'.$input_file.' >'.$output_file.';echo $? >'.$error_file.'', $op);
 				            $x = Storage::get($dir2.$error_file);
+<<<<<<< HEAD
 			                if ($x == 0){
+=======
+			                if ($x == 0){ 
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 			                	$x = Storage::get($dir2.$output_file);
 			                	$CODE->verdict = "AC";
 			                }
 			                else if ($x == 124){
 			                	$x = "Time Limit Exceeded";
+<<<<<<< HEAD
 			                	$CODE->verdict = "TLE";
 			                }
 
 			                else{
+=======
+			                	$CODE->verdict = "TLE";	
+			                } 
+			                
+			                else{ 
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 			                	$x = "Runtime Error";
 			                	$CODE->verdict = "RE";
 			                }
@@ -109,16 +143,27 @@ class compilerController extends Controller
 			            {
 			                exec('cd '.$dir.' && timeout 2 java Main <'.$input_file.' >'.$output_file.';echo $? >'.$error_file.'', $op);
 			                $x = Storage::get($dir2.$error_file);
+<<<<<<< HEAD
 			                if ($x == 0){
+=======
+			                if ($x == 0){ 
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 			                	$x = Storage::get($dir2.$output_file);
 			                	$CODE->verdict = "AC";
 			                }
 			                else if ($x == 124){
 			                	$x = "Time Limit Exceeded";
+<<<<<<< HEAD
 			                	$CODE->verdict = "TLE";
 			                }
 
 			                else{
+=======
+			                	$CODE->verdict = "TLE";	
+			                } 
+			                
+			                else{ 
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 			                	$x = "Runtime Error";
 			                	$CODE->verdict = "RE";
 			                }
@@ -150,7 +195,11 @@ class compilerController extends Controller
 
 			        if ($status == 0)
 			            {
+<<<<<<< HEAD
 			                exec('cd '.$dir.' && timeout 2 python '.$code_file.' <'.$input_file.' >'.$output_file.';echo $? >'.$error_file.'', $op);
+=======
+			                exec('cd '.$dir.' && timeout 2 python '.$code_file.' <'.$input_file.' >'.$output_file.';echo $? >'.$error_file.'', $op);        
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
 			                $x = Storage::get($dir2.$output_file);
 			                echo $x;
 			            }
@@ -161,6 +210,7 @@ class compilerController extends Controller
 				}
 			$CODE->save();
     	}
+<<<<<<< HEAD
     public function fileUpload(Request $request){
         $file = request()->file('image');
         $value = 'test@iiitdmj.ac.in';//$_SESSION['username'];
@@ -205,3 +255,6 @@ class compilerController extends Controller
     return response()->download($file);
 }
 }
+=======
+}
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691

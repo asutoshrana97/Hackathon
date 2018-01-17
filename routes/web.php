@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('login2');
 });
+<<<<<<< HEAD
 
 Route::get('/main',function(){
     return view('main');
@@ -111,3 +112,9 @@ Route::post('insert', 'compilerController@fileUpload');
 Route::get('/view_public','compilerController@view_public');
 Route::get('/view_private','compilerController@view_private');
 Route::post('/download','compilerController@getDownload');
+=======
+Route::get('/compiler',function(){
+		return view('compiler');
+	});
+Route::post('/compile', 'compilerController@compile');
+>>>>>>> 72850b892129c96d8678a192683a8f2d16ab9691
